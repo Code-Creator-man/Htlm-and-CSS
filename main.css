@@ -1,0 +1,469 @@
+/* Genel ayarları yapıyoruz */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  /* Sayfa taşmasını engeller */
+}
+
+/* Videoyu ve içeriği saran kapsayıcı */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Yüksekliği ekran yüksekliği kadar yapar */
+  overflow: hidden;
+  /* Videonun dışına taşmasını engeller */
+}
+
+/* Arka plan videosu */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Video ekranı tamamen kaplar */
+  z-index: -1;
+  /* Videoyu diğer içeriğin arkasında tutar */
+}
+
+/* İçerik bölgesi */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: -1;
+  /* İçeriği video üstünde tutar */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  /* İçeriği vurgulamak için yarı şeffaf arka plan */
+  border-radius: 10px;
+  /* Kenarları yuvarlatır */
+}
+
+/* !audio place */
+
+/* Diğer CSS kodlarınız */
+.oiphone {
+  position: absolute;
+  top: 214px;
+  left: 851px;
+  width: 344px;
+  border: 10px solid #444141;
+  height: 655px;
+  border-radius: 55px;
+  background-color: rgb(255, 255, 255);
+}
+
+.but1 {
+  position: absolute;
+  top: 75px;
+  right: 341px;
+  width: 5px;
+  height: 20px;
+  background-color: #444141;
+  border: 6px solid #444141;
+  border-radius: 4px;
+  transition: 0.4999s;
+
+  &:active {
+    right: 339px;
+  }
+}
+
+.but2 {
+  position: absolute;
+  top: 135px;
+  right: 341px;
+  width: 5px;
+  height: 43px;
+  background-color: #444141;
+  border: 6px solid #444141;
+  border-radius: 6px;
+  transition: 0.4999s;
+
+  &:active {
+    right: 339px;
+  }
+}
+
+.but3 {
+  position: absolute;
+  top: 200px;
+  right: 341px;
+  width: 5px;
+  height: 43px;
+  background-color: #444141;
+  border: 6px solid #444141;
+  border-radius: 6px;
+  transition: 0.4999s;
+
+  &:active {
+    right: 339px;
+  }
+}
+
+.but4 {
+  position: absolute;
+  top: 157px;
+  left: 345px;
+  width: 5px;
+  height: 61px;
+  background-color: #444141;
+  border: 6px solid #444141;
+  border-radius: 6px;
+  transition: 0.4999s;
+
+  &:active {
+    left: 343px;
+  }
+}
+
+.main {
+  position: absolute;
+  top: 220px;
+  left: 860px;
+  right: 860px;
+  width: 338px;
+  border: 10px solid #000;
+  height: 657px;
+  border-radius: 47px;
+  background-color: aliceblue;
+  background: url(icons/download.jfif);
+  background-repeat: no-repeat;
+  background-position: 19px;
+  background-size: 104%;
+  background-position: center;
+  transition: 0.6s;
+}
+
+.island {
+  position: absolute;
+  top: 9px;
+  left: 106px;
+  border: 1px solid #000;
+  width: 121px;
+  height: 27px;
+  background-color: #000;
+  border-radius: 30px;
+  text-align: center;
+  font-family: cursive;
+  background: url(icons/90.png);
+  background-repeat: no-repeat;
+  background-size: 19px;
+  background-color: #000000;
+  background-position: 12px;
+  box-shadow: -6px 14px 30px 2px rgb(57, 57, 57);
+  transition: 0.8s;
+
+  &:hover {
+    position: absolute;
+    top: 9px;
+    left: 75px;
+    border: 1px solid #000;
+    width: 171px;
+    height: 37px;
+    background-color: #000;
+    border-radius: 30px;
+    text-align: center;
+    padding: 6px;
+    font-size: 25px;
+    font-family: cursive;
+    color: white;
+    /* ? */
+    background: url(icons/90.png);
+    background-repeat: no-repeat;
+    background-size: 38px;
+    background-position: 130px;
+    background-color: #000;
+    box-shadow: 2px 14px 30px 2px rgb(57, 57, 57);
+  }
+}
+
+.whatch {
+  color: #000;
+  transition: 0.4s;
+
+  &:hover {
+    font-size: 18px;
+  }
+}
+
+.icon-set {
+  position: absolute;
+  left: 53px;
+  top: 18px;
+  background: url(icons/github.png);
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: center;
+  width: 30px;
+  height: 20px;
+  transition: 0.5s;
+
+  &:hover {
+    left: 53px;
+    top: 18px;
+    background-size: 20px;
+    width: 30px;
+    height: 20px;
+  }
+}
+
+.icon-wifi {
+  position: absolute;
+  top: 13px;
+  right: 44px;
+  background: url(icons/signal-wifi-4-bar-lock_118634.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  transition: 0.4s;
+
+  &:active {
+    background: url(icons/200.png);
+    background-repeat: no-repeat;
+    background-size: 88%;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.icon-charge {
+  position: absolute;
+  top: 18px;
+  left: 297px;
+  background: url(icons/battary.png);
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: center;
+  width: 25px;
+  height: 15px;
+  transition: 0.4s;
+
+  &:hover {
+    background: url(icons/100.png);
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: center;
+    width: 25px;
+    height: 15px;
+  }
+}
+
+.icon-signal {
+  position: absolute;
+  top: 18px;
+  right: 68px;
+  background: url(icons/icons8-signal-100.png);
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center;
+  width: 30px;
+  height: 15px;
+}
+
+.date {
+  position: absolute;
+  top: 70px;
+  left: 87px;
+  width: 180px;
+  height: 70px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 27px;
+  background: -webkit-linear-gradient(rgb(0, 0, 0), rgb(87, 0, 174));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.dete {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  width: auto;
+  height: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  &:hover {
+  }
+}
+
+button {
+  width: 70px;
+  height: 30px;
+  position: absolute;
+  top: 170px;
+  left: 240px;
+  border-radius: 15px;
+}
+
+button:hover {
+  background-color: #2c3a47;
+}
+
+.input-1 {
+  width: 200px;
+  height: 25px;
+  position: absolute;
+  top: 170px;
+  left: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(26px);
+  transition: 0.9s;
+  border: 3px groove #8647f2;
+
+  &:hover {
+    width: 205px;
+    height: 30px;
+  }
+
+  &:focus {
+    border: 1px groove #000;
+    background-color: #410090;
+    position: absolute;
+    top: 169px;
+    left: 20px;
+  }
+}
+
+.faceofdreams {
+  position: absolute;
+  top: 250px;
+  left: 17px;
+  background: url(icons/photo_2024-07-03_11-41-41.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  width: 62px;
+  height: 62px;
+  border-radius: 14px;
+  transition: 0.4s;
+  &:hover {
+    top: 242px;
+    left: 20px;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.city {
+  position: absolute;
+  bottom: 6px;
+  left: 9px;
+  border: 0px groove #626161;
+  height: 90px;
+  width: 95%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(26px);
+  border-radius: 30px;
+
+  .music {
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+    background: url(icons/spotify.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 74px;
+    height: 74px;
+    border-radius: 14px;
+    transition: 0.4s;
+
+    &:hover {
+      bottom: 12px;
+      right: 7px;
+      background-size: 100%;
+      width: 77px;
+      height: 77px;
+    }
+  }
+
+  .message {
+    position: absolute;
+    bottom: 14px;
+    left: 171px;
+    background: url(icons/iconfinder.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 10px;
+    width: 60px;
+    height: 59px;
+    transition: 0.4s;
+
+    &:hover {
+      bottom: 16px;
+      left: 170px;
+      background-size: 100%;
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  .safari {
+    position: absolute;
+    bottom: 12px;
+    left: 90px;
+    background: url(icons/safari_ios_browser_logo_icon_152966.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 59px;
+    height: 59px;
+    border-radius: 11px;
+    transition: 0.4s;
+
+    &:hover {
+      bottom: 15px;
+      left: 92px;
+      background-size: 100%;
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  .phone {
+    position: absolute;
+    bottom: 8px;
+    left: 7px;
+    background: url(icons/phone.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 67px;
+    height: 67px;
+    transition: 0.4s;
+
+    border-radius: 11px;
+
+    &:hover {
+      bottom: 15px;
+      left: 8px;
+      background-size: 74px;
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+footer {
+  border: 1px solid #000;
+  position: absolute;
+  left: 108px;
+  right: 105px;
+  bottom: 5px;
+  width: 120px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #101112;
+  transition: max-height 0.5s ease-out;
+}
